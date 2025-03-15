@@ -1,0 +1,39 @@
+{
+    "numer_zlecenia": "Numer lub id zlecenia",
+    "data_zlecenia": "Data utworzenia zlecenia",
+    "zleceniodawca": {
+        "nazwa": "Nazwa firmy ze zlecenia",
+        "kod_kraju": "Kod kraju pochodzenia",
+        "miasto": "Miasto z adresu zleceniodawcy",
+        "ulica": "Adres zleceniodawcy",
+        "NIP": "Nip lub vat-id",
+        "email": "Adres email osoby kontaktowej"
+    },
+    "zaladunek": {
+        "data": "Data zaladunku",
+        "czas": "Czas na zaladunek",
+        "firma_zaladunku": "Tutaj nazwa firmy na miejscu zaladunku",
+        "kod_kraju": "Kod kraju",
+        "miasto": "Nazwa miasta",
+        "ulica_zaladunku": "Adres miejsca zaladunku",
+        "informacje": "Informacje dodatkowe, referencje, wymiana palet lub DPL/paki"
+    },
+    "rozladunek": {
+        "data": "Data zaladunku",
+        "czas": "Czas na zaladunek",
+        "firma_zaladunku": "Tutaj nazwa firmy na miejscu zaladunku",
+        "kod_kraju": "Kod kraju",
+        "miasto": "Nazwa miasta",
+        "ulica_zaladunku": "Adres miejsca zaladunku",
+        "informacje": "Informacje dodatkowe, referencje, wymiana palet lub DPL/paki"
+    },
+    "ladunek": {
+        "rodzaj": "Czym jest ladunek lub jakiego jest rodzaju",
+        "waga": "Waga towaru w tonach",
+        "ilosc": "Ilosc towaru do zabrania",
+        "ADR": "Klasa ADR jeśli jest podana"
+    },
+    "fracht": "Kwota frachtu",
+    "termin": "Termin platnosci w dniach",
+    "Auto": "Typ auta potrzebny"
+}

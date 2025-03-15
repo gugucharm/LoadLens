@@ -1,0 +1,10 @@
+### Upload PDF - POST
+POST http://localhost:5000/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="pdf_file"; filename="order.pdf"
+Content-Type: application/pdf
+
+< C:/Users/gugu/Documents/LoadLens/backend/example_orders/order.pdf
+------WebKitFormBoundary--

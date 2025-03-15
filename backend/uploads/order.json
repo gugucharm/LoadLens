@@ -1,0 +1,39 @@
+{
+    "numer_zlecenia": "3675583",
+    "data_zlecenia": "2025-02-10",
+    "zleceniodawca": {
+        "nazwa": "ROK-IT TRANSPORTE GMBH",
+        "kod_kraju": "IT",
+        "miasto": "Bolzano",
+        "ulica": "Viale Amedeo Duca d’Aosta 70",
+        "NIP": "03154770212",
+        "email": "amministrazione@rok-ittransporte.com"
+    },
+    "zaladunek": {
+        "data": "2025-02-12",
+        "czas": "Nie podano",
+        "firma_zaladunku": "Hillebrand Gori Italy Srl",
+        "kod_kraju": "IT",
+        "miasto": "Oppeano",
+        "ulica_zaladunku": "VIA MAZZANTA, 1",
+        "informacje": "Brak wymiany palet"
+    },
+    "rozladunek": {
+        "data": "2025-02-14",
+        "czas": "09:00",
+        "firma_rozladunku": "NETTO MARK.- DISC.STIFT.&CO.KG BOTT",
+        "kod_kraju": "DE",
+        "miasto": "Bottrop",
+        "ulica_rozladunku": "WEUSTERSTR. 4",
+        "informacje": "Brak dodatkowych informacji"
+    },
+    "ladunek": {
+        "rodzaj": "Palety",
+        "waga": "20.788 KG",
+        "ilosc": "32",
+        "ADR": "Brak"
+    },
+    "fracht": "1600 EUR",
+    "termin": "Nie podano",
+    "Auto": "Standard/Tautliner"
+}
