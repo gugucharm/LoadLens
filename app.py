@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify
-import os
 from Services.pdf_service import OrderMakerService
+import logging
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = "uploads"
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 @app.route('/upload', methods=['POST'])
 def upload_pdf():
@@ -13,22 +13,27 @@ def upload_pdf():
         return jsonify({'error': 'No file uploaded'}), 400
 
     file = request.files['pdf_file']
-    
+
     if file.filename == '':
         return jsonify({'error': 'Empty file'}), 400
 
-    file_path = os.path.join(UPLOAD_FOLDER, file.filename)
-    file.save(file_path)
+    logger.info(f"Received file: {file.filename}, Size: {file.content_length} bytes")
 
-    extracted_text = OrderMakerService.create_order(file_path)
-    json_file_path = file_path.replace(".pdf", ".json")
+    # Log first few bytes of the file
+    file.seek(0)  # Reset pointer
+    first_bytes = file.read(5)
+    logger.info(f"File Header (first 5 bytes): {first_bytes}")
 
-    return jsonify({
-        "message": "File processed successfully",
-        "filename": file.filename,
-        "json_file": json_file_path
-    })
+    file.seek(0)  # Reset again before passing to processing function
+    extracted_json = OrderMakerService.create_order(file)
 
+    return jsonify(extracted_json)
+
+
+
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "healthy", "message": "App is running"}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
