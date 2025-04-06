@@ -1,0 +1,13 @@
+### Upload PDF - POST
+POST http://localhost:5000/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="pdf_file"; filename="order.pdf"
+Content-Type: application/pdf
+
+< C:/Users/user/Documents/LoadLens/orders/order.pdf
+------WebKitFormBoundary--
+
+### Health Check - GET
+GET http://localhost:5000/health
