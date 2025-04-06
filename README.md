@@ -4,23 +4,23 @@ The purpose of this app is to leverage capabilities of Open AI's LLM for the use
 
 ## Set up
 
-First, clone the repository:<br>
+First, clone the repository:<br><br>
 `git clone https://github.com/gugucharm/LoadLens.git`
 
-Enter the repository, download the dependencies and create an environmental variable OPENAI_API_KEY:<br>
+Enter the repository, download the dependencies and create an environmental variable OPENAI_API_KEY:<br><br>
 `cd LoadLens`<br>
 `pip install -r requirements.txt`<br>
 `$env:OPENAI_API_KEY="yourapikey"`<br>
 
 Before running the app, you also need to upload the transport order/document in PDF format to ./orders.
 There is also order.json file that is going to modified upon successful response from Open AI.
-After uploading the PDF file rename it to "order.pdf" and run the app.<br>
+After uploading the PDF file rename it to "order.pdf" and run the app.<br><br>
 `python app.py`
 
 You can send the request to the API directly from api_test.http file, which you can find in RestClient Endpoints folder.
 However, it will only work in case you're using VS Code and you have REST Client extension installed (it is the preferred way).
-Also, before sending the request, you need to change the path to the order file from:<br>
-`C:/Users/user/Documents/LoadLens/orders/order.pdf`<br>
+Also, before sending the request, you need to change the path to the order file from:<br><br>
+`C:/Users/user/Documents/LoadLens/orders/order.pdf`<br><br>
 to whatever the exact location of the file is, just remember to use an ABSOLUTE path.
 
 The request will send the prompt to Open API and it's response will be converted into a JSON format in the location mentioned before.
